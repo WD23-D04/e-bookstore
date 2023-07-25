@@ -1,0 +1,31 @@
+@use '../utiles' as *;
+
+@mixin button($justify-content) {
+  width: 400px;
+  height: 60px;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: $justify-content;
+  font-size: $font-m;
+  padding: 0.5em;
+}
+
+.button-cta {
+  @include button(center);
+  background-color: $accent-color;
+  color: white;
+}
+
+.button-secondary {
+  @include button(center);
+  background-color: white;
+  color: $main-color--dark;
+}
+
+.button-buy {
+  @include button(space-between);
+  color: white;
+  background-color: $accent-color;
+}
