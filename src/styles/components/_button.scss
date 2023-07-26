@@ -1,4 +1,4 @@
-@use '../utiles' as *;
+@use '../utiles/utiles' as *;
 
 @mixin button($justify-content) {
   width: 400px;
@@ -16,6 +16,13 @@
 .button-cta {
   @include button(center);
   background-color: $accent-color;
+  color: white;
+}
+
+.button-cta--2text {
+  @include button(space-between);
+  background-color: $accent-color;
+  
   color: white;
 }
 

@@ -1,3 +1,4 @@
+@use '../utiles/utiles' as *;
 .login-page {
   display: flex;
   &__img {
@@ -14,6 +15,12 @@
     display: block;
   }
 
+  &__welcome {
+    @include text-m($grey);
+  }
+  &__title {
+    @include text-l($black);
+  }
   &__form {
     display: flex;
     flex-direction: column;
@@ -21,6 +28,13 @@
     label {
       margin-top: 5vh;
       margin-bottom: 1vh;
+      @include text-s($black);
+    }
+    :placeholder {
+      @include text-s($grey);
+    }
+    label[for='checkbox'] {
+      @include text-xs($main-color--dark);
     }
     input[name='checkbox'] {
       margin-right: 10px;
