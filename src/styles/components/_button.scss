@@ -10,6 +10,7 @@
   justify-content: $justify-content;
   font-size: $font-m;
   padding: 0.5em;
+  margin: 5px auto;
 }
 
 .button-cta {
@@ -22,6 +23,7 @@
   @include button(center);
   background-color: white;
   color: $main-color--dark;
+  border: 1px solid $main-color--dark;
 }
 
 .button-buy {
