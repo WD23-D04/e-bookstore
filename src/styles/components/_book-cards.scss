@@ -1,4 +1,4 @@
-@use '../utiles' as *;
+@use '../utiles/utiles' as *;
 
 .book-card-container {
   display: flex;
@@ -10,6 +10,7 @@
     justify-content: center;
   }
 }
+
 .book-card {
   background-color: $main-color--light;
   border-radius: 4px;
@@ -21,8 +22,35 @@
   max-width: 400px;
 
   &__img {
+    grid-area: img;
+    aspect-ratio: 2 / 3;
+    width: clamp(100px, 80%, 250px);
+    object-fit: cover;
+    border-radius: 4px;
     margin: 0 auto 20px;
   }
+  &__title {
+    grid-area: title;
+    margin-top: 10px;
+    @include text-s($black);
+  }
+  &__author {
+    grid-area: author;
+    @include text-xs($grey);
+  }
+  &__price {
+    @include text-m($main-color--dark);
+    grid-area: price;
+    text-align: right;
+    align-self: end;
+    margin-bottom: 10px;
+
+    &::after {
+      content: ' $';
+    }
+  }
+
+  
 
   &--horizontal {
     @extend .book-card;
@@ -33,17 +61,6 @@
       'img title'
       'img author'
       'img price';
-    .book-card__img {
-      margin-right: 10px;
-    }
-    .book-card__title {
-      margin-top: 10px;
-    }
-    .book-card__price {
-      text-align: left;
-      align-self: end;
-      margin-bottom: 10px;
-    }
   }
 
   &--vertical {
@@ -56,31 +73,6 @@
       'img img'
       'title .'
       'author price';
-  }
-
-  &__img {
-    grid-area: img;
-    aspect-ratio: 2 / 3;
-    width: clamp(100px, 80%, 250px);
-    object-fit: cover;
-    border-radius: 4px;
-  }
-  &__title {
-    grid-area: title;
-    font-size: $font-s;
-  }
-  &__author {
-    grid-area: author;
-    font-size: $font-xs;
-  }
-  &__price {
-    grid-area: price;
-    font-size: $font-m;
-    text-align: right;
-
-    &::after {
-      content: ' $';
-    }
   }
 }
 

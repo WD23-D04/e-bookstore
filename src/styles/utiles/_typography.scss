@@ -1,0 +1,65 @@
+@use './colors' as *;
+@use './_font-sizes' as *;
+
+$font-family: 'Manrope', sans-serif;
+
+/* 16 */
+@mixin text-xs($color) {
+  font-size: $font-xs;
+  color: $color;
+}
+
+/* 20 */
+/* this can be black, grey or accent */
+@mixin text-s($color) {
+  font-size: $font-s;
+  color: $color;
+}
+
+/* 24 */
+/* this can be black or grey */
+@mixin text-m($color) {
+  font-size: $font-m;
+  color: $color;
+}
+
+/* 32 */
+@mixin text-l($color) {
+  font-size: $font-l;
+  color: $color;
+}
+
+/* 40 */
+@mixin text-xl {
+  font-size: $font-xl;
+  color: $black;
+}
+
+/* 56 */
+@mixin text-xxl {
+  font-size: $font-xxl;
+  color: $black;
+}
+
+input {
+  border: none;
+  padding: 0.5em;
+  height: fit-content;
+  background-color: $main-color--light;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* 
+16 xs
+20 s
+24 m
+32 l
+40 xl
+56 xxl
+*/

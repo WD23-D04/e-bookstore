@@ -1,11 +1,15 @@
-@use '../utiles' as *;
+@use '../utiles/utiles' as *;
 .single-book {
   margin: 5vh 5vw;
   h1 {
     display: inline-block;
   }
-  .button-cta {
+  .button-cta--2text {
     margin-right: 0;
+  }
+
+  &__category-tag {
+    @include text-m($black);
   }
 }
 .book-info {
@@ -23,6 +27,8 @@
   }
   &__title {
     grid-area: title;
+    @include text-xl;
+    margin-bottom: 0.5em;
   }
   &__icon {
     grid-area: icon;
@@ -35,11 +41,18 @@
   }
   &__author {
     grid-area: author;
+    @include text-l($grey);
+    margin-bottom: 2.5em;
   }
   &__summary {
     grid-area: summary;
+    @include text-m($black);
+    margin-bottom: 0.6em;
   }
   &__description {
     grid-area: description;
+    @include text-s($grey);
+    line-height: 1.6em;
+    margin-bottom: 10vh;
   }
 }
