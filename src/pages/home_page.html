@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
     <title>Document</title>
 </head>
 
-<body>
+<body class="home-page">
     <header>
         <img src="../../public/images/company-logo.png" alt="company logo">
         <input type="text" placeholder="Search">
@@ -20,92 +21,58 @@
     <main>
         <section class="hero">
             <div>
+                <h2><span>25% discount</span> all Paulo Coelho books!</h2>
+            </div>
+            <!--  <div>
                 <h2>Offering message</h2>
             </div>
             <div>
                 <h2>Offering message</h2>
-            </div>
-            <div>
-                <h2>Offering message</h2>
-            </div>
+            </div> -->
         </section>
-        <section>
+        <section class="home-page__book-list">
             <ul>
                 <li>
                     <div>
-                        <h2>Best Seller</h2>
-                        <a href="">View All</a>
-                        <ul>
+                        <div class="home-page__book-list">
+                            <h2>Best Seller</h2>
+                            <a href="">View All</a>
+                        </div>
+                        <ul class="book-card-container">
                             <li>
-                                <div>
-                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="book cover">
-                                    <h3>Book Title</h3>
-                                    <p>Book Author</p>
-                                    <p>30</p>
+                                <div class="book-card--vertical">
+                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                        alt="book cover" class="book-card__img">
+                                    <h3 class="book-card__title">Book Title</h3>
+                                    <p class="book-card__author">Book Author</p>
+                                    <p class="book-card__price">30</p>
                                 </div>
                             </li>
                             <li>
-                                <div>
-                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="book cover">
-                                    <h3>Book Title</h3>
-                                    <p>Book Author</p>
-                                    <p>30</p>
+                                <div class="book-card--vertical">
+                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                        alt="book cover" class="book-card__img">
+                                    <h3 class="book-card__title">Book Title</h3>
+                                    <p class="book-card__author">Book Author</p>
+                                    <p class="book-card__price">30</p>
                                 </div>
                             </li>
                             <li>
-                                <div>
-                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="book cover">
-                                    <h3>Book Title</h3>
-                                    <p>Book Author</p>
-                                    <p>30</p>
+                                <div class="book-card--vertical">
+                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                        alt="book cover" class="book-card__img">
+                                    <h3 class="book-card__title">Book Title</h3>
+                                    <p class="book-card__author">Book Author</p>
+                                    <p class="book-card__price">30</p>
                                 </div>
                             </li>
                             <li>
-                                <div>
-                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="book cover">
-                                    <h3>Book Title</h3>
-                                    <p>Book Author</p>
-                                    <p>30</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <h2>Classics</h2>
-                        <a href="">View All</a>
-                        <ul>
-                            <li>
-                                <div>
-                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="book cover">
-                                    <h3>Book Title</h3>
-                                    <p>Book Author</p>
-                                    <p>30</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="book cover">
-                                    <h3>Book Title</h3>
-                                    <p>Book Author</p>
-                                    <p>30</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="book cover">
-                                    <h3>Book Title</h3>
-                                    <p>Book Author</p>
-                                    <p>30</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="book cover">
-                                    <h3>Book Title</h3>
-                                    <p>Book Author</p>
-                                    <p>30</p>
+                                <div class="book-card--vertical">
+                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                        alt="book cover" class="book-card__img">
+                                    <h3 class="book-card__title">Book Title</h3>
+                                    <p class="book-card__author">Book Author</p>
+                                    <p class="book-card__price">30</p>
                                 </div>
                             </li>
                         </ul>
@@ -113,39 +80,91 @@
                 </li>
                 <li>
                     <div>
-                        <h2>Krimi</h2>
-                        <a href="">View All</a>
-                        <ul>
+                        <div class="home-page__book-list">
+                            <h2>Best Seller</h2>
+                            <a href="">View All</a>
+                        </div>
+                        <ul class="book-card-container">
                             <li>
-                                <div>
-                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="book cover">
-                                    <h3>Book Title</h3>
-                                    <p>Book Author</p>
-                                    <p>30</p>
+                                <div class="book-card--vertical">
+                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                        alt="book cover" class="book-card__img">
+                                    <h3 class="book-card__title">Book Title</h3>
+                                    <p class="book-card__author">Book Author</p>
+                                    <p class="book-card__price">30</p>
                                 </div>
                             </li>
                             <li>
-                                <div>
-                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="book cover">
-                                    <h3>Book Title</h3>
-                                    <p>Book Author</p>
-                                    <p>30</p>
+                                <div class="book-card--vertical">
+                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                        alt="book cover" class="book-card__img">
+                                    <h3 class="book-card__title">Book Title</h3>
+                                    <p class="book-card__author">Book Author</p>
+                                    <p class="book-card__price">30</p>
                                 </div>
                             </li>
                             <li>
-                                <div>
-                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="book cover">
-                                    <h3>Book Title</h3>
-                                    <p>Book Author</p>
-                                    <p>30</p>
+                                <div class="book-card--vertical">
+                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                        alt="book cover" class="book-card__img">
+                                    <h3 class="book-card__title">Book Title</h3>
+                                    <p class="book-card__author">Book Author</p>
+                                    <p class="book-card__price">30</p>
                                 </div>
                             </li>
                             <li>
-                                <div>
-                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="book cover">
-                                    <h3>Book Title</h3>
-                                    <p>Book Author</p>
-                                    <p>30</p>
+                                <div class="book-card--vertical">
+                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                        alt="book cover" class="book-card__img">
+                                    <h3 class="book-card__title">Book Title</h3>
+                                    <p class="book-card__author">Book Author</p>
+                                    <p class="book-card__price">30</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div class="home-page__book-list">
+                            <h2>Best Seller</h2>
+                            <a href="">View All</a>
+                        </div>
+                        <ul class="book-card-container">
+                            <li>
+                                <div class="book-card--vertical">
+                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                        alt="book cover" class="book-card__img">
+                                    <h3 class="book-card__title">Book Title</h3>
+                                    <p class="book-card__author">Book Author</p>
+                                    <p class="book-card__price">30</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="book-card--vertical">
+                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                        alt="book cover" class="book-card__img">
+                                    <h3 class="book-card__title">Book Title</h3>
+                                    <p class="book-card__author">Book Author</p>
+                                    <p class="book-card__price">30</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="book-card--vertical">
+                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                        alt="book cover" class="book-card__img">
+                                    <h3 class="book-card__title">Book Title</h3>
+                                    <p class="book-card__author">Book Author</p>
+                                    <p class="book-card__price">30</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="book-card--vertical">
+                                    <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                                        alt="book cover" class="book-card__img">
+                                    <h3 class="book-card__title">Book Title</h3>
+                                    <p class="book-card__author">Book Author</p>
+                                    <p class="book-card__price">30</p>
                                 </div>
                             </li>
                         </ul>
