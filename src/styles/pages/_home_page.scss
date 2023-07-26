@@ -1,0 +1,25 @@
+.home-page {
+  main {
+    margin: 0 5vw;
+  }
+  &__book-list ul li {
+    margin: 3vh 0;
+  }
+}
+
+.hero div {
+  border-radius: 8px;
+  background: url('https://images.unsplash.com/photo-1629470937928-5f873c06005c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+  height: 400px;
+  h2 {
+    max-width: 17ch;
+    span {
+      display: block;
+    }
+  }
+}
+
+.home-page__book-list {
+  display: flex;
+  justify-content: space-between;
+}

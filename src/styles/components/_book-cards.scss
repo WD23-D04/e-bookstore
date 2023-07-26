@@ -4,7 +4,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px 0;
+  li {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+  }
 }
 .book-card {
   background-color: $main-color--light;
