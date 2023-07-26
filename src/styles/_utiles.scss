@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style-type: none;
+}
+
 $font-family: 'Manrope', sans-serif;
 
 $main-color--dark: #6251dd;

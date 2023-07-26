@@ -1,0 +1,26 @@
+.checkout-page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    'header header'
+    'main aside';
+
+  header {
+    grid-area: header;
+    margin-bottom: 10vh;
+  }
+  main {
+    grid-area: main;
+    margin-left: 20vw;
+  }
+  aside {
+    grid-area: aside;
+    margin-right: 20vw;
+  }
+  &__buttons-container {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
