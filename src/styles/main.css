@@ -200,8 +200,11 @@ header .icon-container {
   display: inline-block;
 }
 
-.category-page h1 {
-  display: inline-block;
+.page-main-navigation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 3vh 0;
 }
 
 .checkout-page {
@@ -226,6 +229,46 @@ header .icon-container {
   margin-top: 10vh;
   display: flex;
   flex-direction: column;
+}
+
+.single-book {
+  margin: 5vh 5vw;
+}
+.single-book h1 {
+  display: inline-block;
+}
+.single-book .button-cta {
+  margin-right: 0;
+}
+
+.book-info {
+  display: grid;
+  grid-template-columns: 33vw auto 44px;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "cover title icon" "cover author ." "cover summary ." "cover description description";
+}
+.book-info__cover {
+  grid-area: cover;
+}
+.book-info__title {
+  grid-area: title;
+}
+.book-info__icon {
+  grid-area: icon;
+  width: 20px;
+  height: 20px; /* 
+padding: 30px; */
+  border-radius: 10px;
+  background-color: #f4f4ff;
+}
+.book-info__author {
+  grid-area: author;
+}
+.book-info__summary {
+  grid-area: summary;
+}
+.book-info__description {
+  grid-area: description;
 }
 
 .signup-page {

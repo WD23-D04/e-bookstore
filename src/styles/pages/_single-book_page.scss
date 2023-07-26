@@ -1,0 +1,45 @@
+@use '../utiles' as *;
+.single-book {
+  margin: 5vh 5vw;
+  h1 {
+    display: inline-block;
+  }
+  .button-cta {
+    margin-right: 0;
+  }
+}
+.book-info {
+  display: grid;
+  grid-template-columns: 33vw auto 44px;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    'cover title icon'
+    'cover author .'
+    'cover summary .'
+    'cover description description';
+
+  &__cover {
+    grid-area: cover;
+  }
+  &__title {
+    grid-area: title;
+  }
+  &__icon {
+    grid-area: icon;
+
+    width: 20px;
+    height: 20px; /* 
+    padding: 30px; */
+    border-radius: 10px;
+    background-color: $main-color--light;
+  }
+  &__author {
+    grid-area: author;
+  }
+  &__summary {
+    grid-area: summary;
+  }
+  &__description {
+    grid-area: description;
+  }
+}
