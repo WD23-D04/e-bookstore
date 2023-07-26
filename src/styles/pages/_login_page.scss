@@ -1,4 +1,33 @@
 .login-page {
   display: flex;
+  &__img {
+    width: 50%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  &__content {
+    margin: 10vh 8vw 0;
+  }
 
+  &__logo {
+    margin: 0 auto 10vh;
+    display: block;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    label {
+      margin-top: 5vh;
+      margin-bottom: 1vh;
+    }
+    input[name='checkbox'] {
+      margin-right: 10px;
+    }
+  }
+  .button-container {
+    display: flex;
+    flex-direction: column;
+  }
 }

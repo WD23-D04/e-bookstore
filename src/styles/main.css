@@ -113,6 +113,7 @@ input {
   justify-content: center;
   font-size: 2.4rem;
   padding: 0.5em;
+  margin: 5px auto;
   background-color: #ef6b4a;
   color: white;
 }
@@ -127,8 +128,10 @@ input {
   justify-content: center;
   font-size: 2.4rem;
   padding: 0.5em;
+  margin: 5px auto;
   background-color: white;
   color: #6251dd;
+  border: 1px solid #6251dd;
 }
 
 .button-buy {
@@ -141,6 +144,7 @@ input {
   justify-content: space-between;
   font-size: 2.4rem;
   padding: 0.5em;
+  margin: 5px auto;
   color: white;
   background-color: #ef6b4a;
 }
@@ -224,8 +228,68 @@ header .icon-container {
   flex-direction: column;
 }
 
+.signup-page {
+  display: flex;
+}
+.signup-page__img {
+  width: 50%;
+  height: 100vh;
+  object-fit: cover;
+}
+.signup-page__content {
+  margin: 10vh 8vw 0;
+}
+.signup-page__logo {
+  margin: 0 auto 0vh;
+  display: block;
+}
+.signup-page__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+}
+.signup-page__form label {
+  margin-top: 5vh;
+  margin-bottom: 1vh;
+}
+.signup-page__form input[name=checkbox] {
+  margin-right: 10px;
+}
+.signup-page .button-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .login-page {
   display: flex;
+}
+.login-page__img {
+  width: 50%;
+  height: 100vh;
+  object-fit: cover;
+}
+.login-page__content {
+  margin: 10vh 8vw 0;
+}
+.login-page__logo {
+  margin: 0 auto 10vh;
+  display: block;
+}
+.login-page__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+}
+.login-page__form label {
+  margin-top: 5vh;
+  margin-bottom: 1vh;
+}
+.login-page__form input[name=checkbox] {
+  margin-right: 10px;
+}
+.login-page .button-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .user-page {
