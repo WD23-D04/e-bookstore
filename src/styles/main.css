@@ -23,6 +23,7 @@ input {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 40px 0;
 }
 
 .book-card, .book-card--vertical, .book-card--horizontal {
@@ -32,6 +33,7 @@ input {
   display: grid;
   align-items: center;
   padding: 20px;
+  max-width: 400px;
 }
 .book-card__img {
   margin: 0 auto 20px;

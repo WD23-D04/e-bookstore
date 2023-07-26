@@ -4,16 +4,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
+  gap: 40px 0;
 }
 .book-card {
   background-color: $main-color--light;
   border-radius: 4px;
   border: 1px solid hsla(240, 72%, 13%, 10%);
   display: grid;
+
   align-items: center;
   padding: 20px;
-
+  max-width: 400px;
 
   &__img {
     margin: 0 auto 20px;
