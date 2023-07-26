@@ -224,4 +224,8 @@ header .icon-container {
   flex-direction: column;
 }
 
+.login-page {
+  display: flex;
+}
+
 /*# sourceMappingURL=main.css.map */
