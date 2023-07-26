@@ -224,4 +224,56 @@ header .icon-container {
   flex-direction: column;
 }
 
+.user-page {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 20vw auto;
+  justify-items: center;
+  grid-template-areas: "img liked-books" "address cart-books" "links suggested-books";
+  margin: 10vh auto auto 10vw;
+}
+.user-page__img {
+  width: 300px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  grid-area: img;
+}
+.user-page address {
+  grid-area: address;
+  align-self: center;
+}
+
+/* .books-lists-container {
+  position: fixed;
+  inset: 15vh 10vw auto auto;
+} */
+.liked-books {
+  display: flex;
+  justify-content: left;
+  margin: 10vh auto;
+  grid-area: liked-books;
+}
+
+.cart-books {
+  display: flex;
+  justify-content: left;
+  margin: 10vh auto;
+  grid-area: cart-books;
+}
+
+.suggested-books {
+  display: flex;
+  justify-content: left;
+  margin: 10vh auto;
+  grid-area: suggested-books;
+}
+
+.option-links-container {
+  display: flex;
+  flex-direction: column;
+  grid-area: links;
+  align-self: center;
+}
+
 /*# sourceMappingURL=main.css.map */
