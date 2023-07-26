@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 $font-family: 'Manrope', sans-serif;
 
 $main-color--dark: #6251dd;
@@ -12,3 +18,10 @@ $font-m: 2.4rem;
 $font-l: 3.2rem;
 $font-xl: 4rem;
 $font-xxl: 5.6rem;
+
+input {
+  border: none;
+  padding: 0.5em;
+  height: fit-content;
+  background-color: $main-color--light;
+}

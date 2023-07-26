@@ -1,0 +1,28 @@
+header {
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+  gap: 10px;
+  align-items: center;
+  grid-template-areas: 'logo input icons';
+  background-color: orange;
+  padding: 3vh 2vw;
+}
+
+header .company-logo--small {
+  grid-area: logo;
+}
+
+header input {
+  grid-area: input;
+  max-width: 800px;
+}
+
+header .icon-container {
+  grid-area: icons;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 592px) {
+    flex-direction: row;
+  }
+}
