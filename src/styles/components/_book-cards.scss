@@ -1,47 +1,103 @@
 @use '../utiles' as *;
-@mixin book-card {
+
+.book-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+.book-card {
   background-color: $main-color--light;
   border-radius: 4px;
   border: 1px solid hsla(240, 72%, 13%, 10%);
   display: grid;
+  align-items: center;
+  padding: 20px;
+
+
+  &__img {
+    margin: 0 auto 20px;
+  }
+
+  &--horizontal {
+    @extend .book-card;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 30px 30px auto;
+    grid-template-areas:
+      'img title'
+      'img author'
+      'img price';
+    .book-card__img {
+      margin-right: 10px;
+    }
+    .book-card__title {
+      margin-top: 10px;
+    }
+    .book-card__price {
+      text-align: left;
+      align-self: end;
+      margin-bottom: 10px;
+    }
+  }
+
+  &--vertical {
+    @extend .book-card;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 90% auto auto;
+    width: 20%;
+    min-width: 250px;
+    grid-template-areas:
+      'img img'
+      'title .'
+      'author price';
+  }
 
   &__img {
     grid-area: img;
-    height: 90%;
-    aspect-ratio: 2/ 3;
+    aspect-ratio: 2 / 3;
+    width: clamp(100px, 80%, 250px);
     object-fit: cover;
     border-radius: 4px;
   }
   &__title {
     grid-area: title;
+    font-size: $font-s;
   }
   &__author {
     grid-area: author;
+    font-size: $font-xs;
   }
   &__price {
     grid-area: price;
+    font-size: $font-m;
+    text-align: right;
+
     &::after {
       content: ' $';
     }
   }
 }
 
-.book-card--horizontal {
-  @include book-card;
-  grid-template-columns: auto 55%;
-  grid-template-rows: 25% auto 25%;
+.test {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 30px 30px auto;
+  width: fit-content;
   grid-template-areas:
     'img title'
     'img author'
     'img price';
-}
-
-.book-card--vertical {
-  @include book-card;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas:
-    'img img'
-    'title .'
-    'author price';
+  .book-card__img {
+    margin-right: 10px;
+  }
+  .book-card__title {
+    margin-top: 10px;
+  }
+  .book-card__price {
+    text-align: left;
+    align-self: end;
+    margin-bottom: 10px;
+  }
 }

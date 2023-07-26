@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style-type: none;
+}
+
 input {
   border: none;
   padding: 0.5em;
@@ -11,62 +19,88 @@ input {
   background-color: #f4f4ff;
 }
 
-.book-card--horizontal {
+.book-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.book-card, .book-card--vertical, .book-card--horizontal {
   background-color: #f4f4ff;
   border-radius: 4px;
   border: 1px solid hsla(240, 72%, 13%, 0.1);
   display: grid;
-  grid-template-columns: auto 55%;
-  grid-template-rows: 25% auto 25%;
+  align-items: center;
+  padding: 20px;
+}
+.book-card__img {
+  margin: 0 auto 20px;
+}
+.book-card--horizontal {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 30px 30px auto;
   grid-template-areas: "img title" "img author" "img price";
 }
-.book-card--horizontal__img {
+.book-card--horizontal .book-card__img {
+  margin-right: 10px;
+}
+.book-card--horizontal .book-card__title {
+  margin-top: 10px;
+}
+.book-card--horizontal .book-card__price {
+  text-align: left;
+  align-self: end;
+  margin-bottom: 10px;
+}
+.book-card--vertical {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 90% auto auto;
+  width: 20%;
+  min-width: 250px;
+  grid-template-areas: "img img" "title ." "author price";
+}
+.book-card__img {
   grid-area: img;
-  height: 90%;
   aspect-ratio: 2/3;
+  width: clamp(100px, 80%, 250px);
   object-fit: cover;
   border-radius: 4px;
 }
-.book-card--horizontal__title {
+.book-card__title {
   grid-area: title;
+  font-size: 2rem;
 }
-.book-card--horizontal__author {
+.book-card__author {
   grid-area: author;
+  font-size: 1.6rem;
 }
-.book-card--horizontal__price {
+.book-card__price {
   grid-area: price;
+  font-size: 2.4rem;
+  text-align: right;
 }
-.book-card--horizontal__price::after {
+.book-card__price::after {
   content: " $";
 }
 
-.book-card--vertical {
-  background-color: #f4f4ff;
-  border-radius: 4px;
-  border: 1px solid hsla(240, 72%, 13%, 0.1);
+.test {
   display: grid;
+  align-items: center;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas: "img img" "title ." "author price";
+  grid-template-rows: 30px 30px auto;
+  width: fit-content;
+  grid-template-areas: "img title" "img author" "img price";
 }
-.book-card--vertical__img {
-  grid-area: img;
-  height: 90%;
-  aspect-ratio: 2/3;
-  object-fit: cover;
-  border-radius: 4px;
+.test .book-card__img {
+  margin-right: 10px;
 }
-.book-card--vertical__title {
-  grid-area: title;
+.test .book-card__title {
+  margin-top: 10px;
 }
-.book-card--vertical__author {
-  grid-area: author;
-}
-.book-card--vertical__price {
-  grid-area: price;
-}
-.book-card--vertical__price::after {
-  content: " $";
+.test .book-card__price {
+  text-align: left;
+  align-self: end;
+  margin-bottom: 10px;
 }
 
 .button-cta {
@@ -159,8 +193,35 @@ header .icon-container {
 .arrow-icon {
   width: 15px;
   height: 15px;
-  display: inline;
-  background-color: red;
+  display: inline-block;
+}
+
+.category-page h1 {
+  display: inline-block;
+}
+
+.checkout-page {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "header header" "main aside";
+}
+.checkout-page header {
+  grid-area: header;
+  margin-bottom: 10vh;
+}
+.checkout-page main {
+  grid-area: main;
+  margin-left: 20vw;
+}
+.checkout-page aside {
+  grid-area: aside;
+  margin-right: 20vw;
+}
+.checkout-page__buttons-container {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=main.css.map */
