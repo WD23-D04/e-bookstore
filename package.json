@@ -7,9 +7,14 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "sass": "sass --watch ./src/styles/main.scss:./src/styles/main.css"
+    "sass": "sass --watch ./src/styles/main.scss:./src/styles/main.css",
+    "test": "vitest --ui",
+    "testcov": "vitest --coverage"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "@vitest/coverage-v8": "^0.34.2",
+    "@vitest/ui": "^0.34.2",
     "sass": "^1.64.1",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
