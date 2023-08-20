@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+import { header } from '../components/header';
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/main.css">
-    <title>Document</title>
-</head>
+document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
-<body>
-    <header>
-        <img src="../../public/images/company-logo.png" alt="company logo">
-        <input type="text" placeholder="Search">
-        <div>
-            <a href=""><img src="../../public/images/user.png" alt=""></a>
-            <img src="../../public/images/heart.png" alt="">
-            <a href=""><img src="../../public/images/shopping-cart.png" alt=""></a>
-        </div>
-    </header>
+    ${header}
     <main class="single-book">
         <div class="page-main-navigation">
             <a href=""><img src="../../public/images/arrow.png" alt="go back icon" class="arrow-icon"></a>
@@ -66,7 +51,4 @@
                 corrupti minima animi libero enim. Voluptatem excepturi iste sunt ea, pariatur minima!</p>
         </div>
         <button class="button-cta--2text"><div>30$ </div><div>buy now</div></button>
-    </main>
-</body>
-
-</html>
+    </main>`;

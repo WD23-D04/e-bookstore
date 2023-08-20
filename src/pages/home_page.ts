@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+import { header } from '../components/header';
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/main.css">
-    <title>Document</title>
-</head>
+document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
-<body class="home-page">
-    <header>
-        <img src="../../public/images/company-logo.png" alt="company logo">
-        <input type="text" placeholder="Search">
-        <div>
-            <a href=""><img src="../../public/images/user.png" alt=""></a>
-            <img src="../../public/images/heart.png" alt="">
-            <a href=""><img src="../../public/images/shopping-cart.png" alt=""></a>
-        </div>
-    </header>
+   ${header}
     <main>
         <section class="hero">
             <div>
@@ -174,6 +159,4 @@
 
         </section>
     </main>
-</body>
-
-</html>
+`

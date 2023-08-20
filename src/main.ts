@@ -1,86 +1,49 @@
 import './styles/main.scss';
-import { formatWord } from './utilities/formatWord';
-import { sume } from './utilities/sume';
 import { header } from './components/header';
 
-const rawBook1 = 'the lord of the rings';
-const rawBook2 = 'LoveCraft TaLeS';
-const rawBook3 = 'i robot';
-const rawBook4 = '       luther         ';
+const user = {
+  status: 'success',
+  message: 'User successfully authenticated.',
+  id: '123456',
+  userName: 'Michael',
+  email: 'user@example.com',
+  roles: ['user', 'authenticated'],
+  picture:
+    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
+  token:
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6ImV4YW1wbGVfdXNlciIsImlhdCI6MTYzMTQwNDQzMiwiZXhwIjoxNjMxNDExMjMyfQ.FAKE_TOKEN_SIGNATURE',
+};
 
-/* const book1 = rawBook1.slice(0, 1).toUpperCase(); */
+const userName = user.userName || 'Friedrich';
 
-const book1 = formatWord(rawBook1);
+const message = userName
+  ? `Hello There ${userName}`
+  : `Hello There, please write your name`;
 
-const book2 = formatWord(rawBook2);
-/* rawBook2.trim().slice(0, 1).toUpperCase() +
-  rawBook2.trim().slice(1).toLowerCase(); */
-
-const book3 = rawBook3.trim().toUpperCase();
-
-const book4 = formatWord(rawBook4);
-
-const searchTerm = 'the lord of the rings';
-
-const isBook1 = book1.includes(searchTerm);
-
-console.log(isBook1);
-
-const banane = 8;
-const melone = 9;
-
-const result = sume(banane, melone);
-
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+document.querySelector<HTMLDivElement>('#app')!.innerHTML = /* html */ `
   <div>
-  ${header}
-  
-<main class="category-page">
-<h1>${result}</h1>
-  <div class="page-main-navigation">
-      <a href=""><img src="../../public/images/arrow.png" alt="go back icon" class="arrow-icon"></a>
-      <h1 class="category-page__title">Category Tag</h1>
-  </div>
-  <ul class="book-card-container">
+  ${header()}
+  <img src="https://images.unsplash.com/photo-1456953180671-730de08edaa7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZSUyMGJvb2t8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+  alt="store image" class="login-page__img">
+<div class="login-page__content">
+<img src="../../public/images/company-logo.png" alt="company logo" class="login-page__logo">
+   <h1 class="${
+     userName && 'heute_ist_dienstag' && 'login-page__title'
+   }" >${message}</h1>
+   <h1>${userName || 'Sylvie'}</h1>
+ <form action="" class="login-page__form">
+      <label for="email">E-mail</label>
+      <input type="email" placeholder="john@mail.com">
+      <label for="password">Password</label>
+      <input type="password" placeholder="********" name="password">
 
-      <li>
-          <div class="book-card--vertical">
-              <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
-                  alt="book cover" class="book-card__img">
-              <h3 class="book-card__title">${book1}</h3>
-              <p class="book-card__author">Book Author</p>
-              <p class="book-card__price">30</p>
-          </div>
-      </li>
-      <li>
-          <div class="book-card--vertical">
-              <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
-                  alt="book cover" class="book-card__img">
-              <h3 class="book-card__title">${book2}</h3>
-              <p class="book-card__author">Book Author</p>
-              <p class="book-card__price">30</p>
-          </div>
-      </li>
-      <li>
-          <div class="book-card--vertical">
-              <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
-                  alt="book cover" class="book-card__img">
-              <h3 class="book-card__title">${book3}</h3>
-              <p class="book-card__author">Book Author</p>
-              <p class="book-card__price">30</p>
-          </div>
-      </li>
-      <li>
-          <div class="book-card--vertical">
-              <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
-                  alt="book cover" class="book-card__img">
-              <h3 class="book-card__title">${book4}</h3>
-              <p class="book-card__author">Book Author</p>
-              <p class="book-card__price">30</p>
-          </div>
-      </li>
-        </ul>
-</main>
+      <label for="checkbox"><input type="checkbox" name="checkbox">Remember Me</label>
+  </form>
+  <div class="button-container">
+      <button class="button-cta">Login</button>
+      <button class="button-secondary"><a href="">Register</a></button>
+  </div>
+</div>
   </div>
 `;
 
