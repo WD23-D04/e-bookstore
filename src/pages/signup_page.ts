@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+import { header } from '../components/header';
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/main.css">
-    <title>Document</title>
-</head>
+document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
+    ${header}
 <body class="login-page">
     <img src="https://images.unsplash.com/photo-1456953180671-730de08edaa7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZSUyMGJvb2t8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
         alt="store image" class="login-page__img">
@@ -31,5 +26,4 @@
         </div>
     </div>
 </body>
-
-</html>
+`;
