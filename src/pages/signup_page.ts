@@ -1,8 +1,6 @@
-import { header } from '../components/header';
+export const signupPage = () => {
+  return `
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-
-    ${header}
 <body class="login-page">
     <img src="https://images.unsplash.com/photo-1456953180671-730de08edaa7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZSUyMGJvb2t8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
         alt="store image" class="login-page__img">
@@ -27,3 +25,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </div>
 </body>
 `;
+};
