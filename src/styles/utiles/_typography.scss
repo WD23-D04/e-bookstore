@@ -4,27 +4,27 @@
 $font-family: 'Manrope', sans-serif;
 
 /* 16 */
-@mixin text-xs($color) {
+@mixin text-xs($color : $grey) {
   font-size: $font-xs;
   color: $color;
 }
 
 /* 20 */
 /* this can be black, grey or accent */
-@mixin text-s($color) {
+@mixin text-s($color : $grey) {
   font-size: $font-s;
   color: $color;
 }
 
 /* 24 */
 /* this can be black or grey */
-@mixin text-m($color) {
+@mixin text-m($color : $grey) {
   font-size: $font-m;
   color: $color;
 }
 
 /* 32 */
-@mixin text-l($color) {
+@mixin text-l($color : $grey) {
   font-size: $font-l;
   color: $color;
 }
@@ -50,6 +50,10 @@ input {
 
 ul {
   list-style-type: none;
+}
+
+li {
+  @include text-m;
 }
 
 a {

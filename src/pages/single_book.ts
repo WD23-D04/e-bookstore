@@ -1,8 +1,6 @@
-import { header } from '../components/header';
+export const singleBook = () => {
+  return `
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-
-    ${header}
     <main class="single-book">
         <div class="page-main-navigation">
             <a href=""><img src="../../public/images/arrow.png" alt="go back icon" class="arrow-icon"></a>
@@ -52,3 +50,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         </div>
         <button class="button-cta--2text"><div>30$ </div><div>buy now</div></button>
     </main>`;
+};

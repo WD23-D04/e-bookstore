@@ -1,32 +1,42 @@
-import { header } from '../components/header';
+const buyedBooks = [
+  {
+    id: '7fdf:3d1e:f845:14ef:9634:9030:e280:5ace/94',
+    title: 'Miss March',
+    author: 'Dani Tolliday',
+    price: 82,
+    category: 'Doors, Frames & Hardware',
+  },
+  {
+    id: '3b24:2e94:5c8d:708c:df3:ae1c:ae61:a45/60',
+    title: 'Battles Without Honor & Humanity (Jingi naki tatakai)',
+    author: 'Bealle Lorie',
+    price: 80,
+    category: 'Electrical and Fire Alarm',
+  },
+  {
+    id: '3b24:2e94:5c8d:708c:df3:ae1c:ae61:a45/60',
+    title: 'Battles Without Honor & Humanity (Jingi naki tatakai)',
+    author: 'Bealle Lorie',
+    price: 20,
+    category: 'Electrical and Fire Alarm',
+  },
+];
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+const totalPrice = buyedBooks.reduce((total, book) => book.price + total, 0);
 
-   ${header}
+export const checkoutPage = () => {
+  return `
+
     <main>
         <ul class="ordered-products-list">
-            <li>
-                <div>
-                    <h3>Book Title</h3>
-                    <p>20</p>
-                    <a href="">see the product</a>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <h3>Book Title</h3>
-                    <p>30</p>
-                    <a href="">see the product</a>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <h3>Book Title</h3>
-                    <p>30</p>
-                    <p>2</p>
-                    <a href="">see the product</a>
-                </div>
-            </li>
+           ${buyedBooks.map(
+             (book) =>
+               `<li>
+                <h3>${book.title}</h3>
+                <p>${book.price}</p>
+                <a href="">see the product</a>
+        </li>`
+           )}
         </ul>
         <div class="checkout-page__buttons-container">
             <a href="">See more books!</a>
@@ -34,7 +44,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
         </div>
     </main>
     <aside>
-        <p>TOTAL 80</p>
+        <p>TOTAL ${totalPrice}</p>
         <address>
             <p>Customer Name</p>
             <p>Main Street, 123</p>
@@ -45,3 +55,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
     </aside>
 `;
+};
