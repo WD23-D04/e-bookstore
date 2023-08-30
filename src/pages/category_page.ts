@@ -19,7 +19,9 @@ export const categoryPage = () => {
                     alt="book cover" class="book-card__img">
                 <h3 class="book-card__title">${book.title}</h3>
                 <p class="book-card__author">${book.author}</p>
-                <p class="book-card__price">${book.price} E</p>
+                <p class="book-card__price">${Math.round(
+                  parseInt(book.price) / 100000000
+                )}</p>
             </div>
         </li>`
     )}

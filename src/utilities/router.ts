@@ -4,6 +4,7 @@ import { signupPage } from '../pages/signup_page';
 import { loginPage } from '../pages/login_page';
 import { homePage } from '../pages/home_page';
 import { checkoutPage } from '../pages/checkout_page';
+import { contact_page } from '../pages/contact';
 import { _404 } from '../pages/_404';
 
 const getPageIdCode = () => window.location.pathname.slice(1);
@@ -24,6 +25,8 @@ export const getCurrentPage = () => {
       return loginPage();
     case 'checkout':
       return checkoutPage();
+    case 'contact':
+      return contact_page();
     default:
       return _404();
   }
