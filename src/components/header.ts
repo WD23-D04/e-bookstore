@@ -3,14 +3,6 @@ const url = 'http://localhost:5173/';
 
 const likedBooks = booksData.slice(3, 10);
 
-console.log(likedBooks);
-
-// it must show a number related to the liked books length
-
-// position
-// flex / grid
-// float
-// ::after
 
 export const header = () => {
   return /*html*/ `
