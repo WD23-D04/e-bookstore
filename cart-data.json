@@ -1,0 +1,23 @@
+[
+  {
+    "id": "7fdf:3d1e:f845:14ef:9634:9030:e280:5ace/94",
+    "title": "Miss March",
+    "author": "Dani Tolliday",
+    "price": 82,
+    "category": "Doors, Frames & Hardware"
+  },
+  {
+    "id": "3b24:2e94:5c8d:708c:df3:ae1c:ae61:a45/60",
+    "title": "Battles Without Honor & Humanity (Jingi naki tatakai)",
+    "author": "Bealle Lorie",
+    "price": 80,
+    "category": "Electrical and Fire Alarm"
+  },
+  {
+    "id": "3b24:2e94:5c8d:708c:df3:ae1c:ae61:a45/60",
+    "title": "Battles Without Honor & Humanity (Jingi naki tatakai)",
+    "author": "Bealle Lorie",
+    "price": 20,
+    "category": "Electrical and Fire Alarm"
+  }
+]

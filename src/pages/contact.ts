@@ -1,8 +1,8 @@
 export const contact_page = () => {
-    return `
+  return  /*html*/`
         <form>
             <label>First Name
-                <input type="text" placeholder = "Friedrich"></input>
+                <input type="text" placeholder = "Friedrich" ></input>
             </label>
             <label>Last Name
                 <input type="text" placeholder = "Schäffer"></input>
@@ -14,5 +14,5 @@ export const contact_page = () => {
                 <textarea>Please, your message here</textarea>
             </label>
         </form>
-    `
-}
+    `;
+};

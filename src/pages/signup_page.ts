@@ -1,5 +1,5 @@
 export const signupPage = () => {
-  return `
+  return /*html*/ `
 
 <body class="login-page">
     <img src="https://images.unsplash.com/photo-1456953180671-730de08edaa7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZSUyMGJvb2t8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
@@ -19,8 +19,8 @@ export const signupPage = () => {
             <label for="checkbox"><input type="checkbox" name="checkbox">Remember Me</label>
         </form>
         <div class="button-container">
-            <button class="button-cta">Login</button>
-            <button class="button-secondary"><a href="">Register</a></button>
+            <button class="button-cta">Sign Up</button>
+            <button class="button-secondary"><a href="http://localhost:5173/login">Login</a></button>
         </div>
     </div>
 </body>

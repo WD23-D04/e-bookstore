@@ -1,0 +1,20 @@
+{
+  "fullName": "Patricia Lebsack",
+  "userName": "Karianne",
+  "email": "Julianne.OConner@kory.org",
+  "address": {
+    "street": "Hoeger Mall",
+    "suite": "Apt. 692",
+    "city": "South Elvis",
+    "zipcode": "53919-4257",
+    "lat": "29.4572",
+    "lng": "-164.2990"
+  },
+  "phone": "493-170-9623 x156",
+  "website": "kale.biz",
+  "company": {
+    "name": "Robel-Corkery",
+    "catchPhrase": "Multi-tiered zero tolerance productivity"
+  },
+  "picture": "https://plus.unsplash.com/premium_photo-1679750867619-6f6e57fc8762?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+}

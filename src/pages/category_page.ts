@@ -1,8 +1,16 @@
-import bookData from '../../book-data.json';
+import booksData from '../../books-data.json';
 
-const selectedBooks = bookData.slice(0, 4);
+const categoryUrl = window.location.pathname.split('/').at(-1);
+
+const filteredBooks = booksData.filter((book) => {
+  const categories = book.categories
+    .split('|')
+    .map((category) => category.toLowerCase());
+  return categories.includes(categoryUrl);
+});
+
 export const categoryPage = () => {
-  return `
+  return /*html*/ `
   <div>
   
 <main class="category-page">
@@ -11,7 +19,7 @@ export const categoryPage = () => {
       <h1 class="category-page__title">Category Tag</h1>
   </div>
   <ul class="book-card-container">
-    ${selectedBooks.map(
+    ${filteredBooks.map(
       (book) =>
         `<li>
             <div class="book-card--vertical">
@@ -19,9 +27,7 @@ export const categoryPage = () => {
                     alt="book cover" class="book-card__img">
                 <h3 class="book-card__title">${book.title}</h3>
                 <p class="book-card__author">${book.author}</p>
-                <p class="book-card__price">${Math.round(
-                  parseInt(book.price) / 100000000
-                )}</p>
+                <p class="book-card__price">${book.price}</p>
             </div>
         </li>`
     )}
