@@ -19,7 +19,12 @@ export const contact_page = () => {
       const error = 'Your fields are too long';
       console.error(error);
       return error;
-    } else {
+    }else if(formData.email.includes("@") || formData.email.includes(".")) {
+        const error = 'Your email should contain an @ and a .';
+      console.error(error);
+      return error;
+    }
+    else {
       console.log(formData);
     }
   };
