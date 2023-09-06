@@ -1,6 +1,9 @@
 import userData from '../data/user-data.json';
 import booksData from '../data/books-data.json';
-
+import {
+  capitalizeFirst,
+  capitalizeFirstLetterEveryWord,
+} from '../utilities/tools/';
 const {
   fullName,
   userName,
@@ -24,16 +27,18 @@ export const userPage = () => {
       <img src=${picture}/>
       <section>
         <h2>Liked Books</h2>
-      ${likedBooks.map((bookId) => {
-        const book = booksData.find((book) => book.id === bookId);
-        return /*html*/ `
+      ${likedBooks
+        .map((bookId) => {
+          const book = booksData.find((book) => book.id === bookId);
+          return /*html*/ `
         <div>
-          <h3>${book?.title}</h3>
-          <p>${book?.author}</p>
+          <h3>${capitalizeFirst(book?.title)}</h3>
+          <p>${capitalizeFirstLetterEveryWord(book?.author)}</p>
           <p>${book?.price}</p>
       </div>
         `;
-      }).join("")}
+        })
+        .join('')}
       </section>
     </div>`;
 };

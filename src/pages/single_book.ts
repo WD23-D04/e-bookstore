@@ -1,10 +1,10 @@
 import booksData from '../data/books-data.json';
-const singleBookData = booksData[100];
+import {
+  capitalizeFirst,
+  capitalizeFirstLetterEveryWord,
+} from '../utilities/tools';
 
-const formatPrice = (_price: string) => {
-  return (parseInt(_price) / 100000000).toFixed();
-};
-
+const singleBookData = booksData[0];
 export const singleBook = () => {
   return /* html */ `
 
@@ -16,10 +16,16 @@ export const singleBook = () => {
         <div class="book-info">
             <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
                 alt="Book Title Image" class="book-info__cover">
-            <h1 class="book-info__title">${singleBookData.title}</h1>
+            <h1 class="book-info__title">${capitalizeFirst(
+              singleBookData.title
+            )}</h1>
             <img src="../../public/images/heart.png" alt="like icon" class="book-info__icon">
-            <p class="book-info__author">${singleBookData.author}</p>
+            <p class="book-info__author">${capitalizeFirstLetterEveryWord(
+              singleBookData.author
+            )}</p>
         </div>
-        <button class="button-cta--2text"><div>${singleBookData.price}$ </div><div>buy now</div></button>
+        <button class="button-cta--2text"><div>${
+          singleBookData.price
+        }$ </div><div>buy now</div></button>
     </main>`;
 };
