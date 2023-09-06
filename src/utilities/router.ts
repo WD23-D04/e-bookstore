@@ -7,7 +7,6 @@ import { checkoutPage } from '../pages/checkout_page';
 import { contact_page } from '../pages/contact';
 import { userPage } from '../pages/userPage';
 import { _404 } from '../pages/_404';
-import userData from '../../user-data.json';
 
 
 const getPageIdCode = () => window.location.pathname.slice(1);

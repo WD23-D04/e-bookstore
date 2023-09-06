@@ -1,5 +1,5 @@
 export const _404 = () => {
-  return `
+  return /*html*/ `
   
       <main>
         <h1>Page not found</h1>

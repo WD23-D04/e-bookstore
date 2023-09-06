@@ -20,8 +20,7 @@ export const categoryPage = () => {
   </div>
   <ul class="book-card-container">
     ${filteredBooks.map(
-      (book) =>
-        `<li>
+      (book) => /*html*/ `<li>
             <div class="book-card--vertical">
                 <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
                     alt="book cover" class="book-card__img">

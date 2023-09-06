@@ -11,8 +11,7 @@ export const checkoutPage = () => {
     <main>
         <ul class="ordered-products-list">
            ${cartData.map(
-             (book) =>
-               `<li>
+             (book) => /*html*/ `<li>
                 <h3>${book.title}</h3>
                 <p>${book.price}</p>
                 <a href="">see the product</a>

@@ -4,12 +4,26 @@ const url = 'http://localhost:5173/';
 
 const likedBooks = booksData.slice(3, 10);
 
-/* const uniqueCategories = [
-  ...new Set([].concat(...booksData.map((book) => book.categories.split('|')))),
-]; */
 const uniqueCategories = [
-  ...new Set([].concat(...booksData.map((book) => book.categories.split('|'))).sort()),
+  ...new Set(
+    [].concat(...booksData.map((book) => book.categories.split('|'))).sort()
+  ),
 ];
+
+window.addEventListener('load', () => {
+  uniqueCategories.forEach((category) => {
+    const select = document.querySelector('select');
+    const option = document.createElement('option');
+    option.innerText = category;
+    option.value = category;
+    option.addEventListener('click', () => {
+      window.location.href = `${url}category-page/${option.value.toLowerCase()}`;
+    });
+    select?.appendChild(option);
+  });
+
+  /* <a href="/category-page/${category.toLowerCase()}" >${category.toLowerCase()}</a> */
+});
 
 export const header = () => {
   return /*html*/ `
@@ -31,16 +45,10 @@ export const header = () => {
       <li><a href=${`${url}contact`}><img src="../../public/images/mail.png" alt="mail link" class="social_icon"></a></li>
     </ul>
     <nav>
-      <ul>
+      <select>
         <!-- <li><a href=${`${url}single-book`}>Single</a></li> -->
-        <li><a href=${`${url}category-page`}>Category</a></li>
-        ${uniqueCategories.map(
-          (category) =>
-            `<li>
-            <a href=${`${url}category-page\\${category.toLowerCase()}`}>${category}</a>
-          </li>`
-        )}
-      </ul>
+        
+      </select>
     </nav>
   </header>`;
 };
