@@ -12,12 +12,12 @@ const uniqueCategories = [
   ),
 ];
 
-const categories = booksData.map((book) => book.categories.split('|'));
+
+/* const categories = booksData.map((book) => book.categories.split('|'));
 const singleCategoriesArray = categories.flat(Infinity);
 const _uniqueCategories = new Set(singleCategoriesArray);
 const newCategoryArray = Array.from(_uniqueCategories);
-const sortedCategories = newCategoryArray.sort();
-console.log(sortedCategories);
+const sortedCategories = newCategoryArray.sort(); */
 
 /* const uniqueCategories = (...booksData.map(book => book.categories.split("|"))) */
 
