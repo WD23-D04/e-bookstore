@@ -12,12 +12,15 @@ const uniqueCategories = [
   ),
 ];
 
+//["Drama"]
+
+/*
 const categories = booksData.map((book) => book.categories.split('|'));
 const singleCategoriesArray = categories.flat(Infinity);
 const _uniqueCategories = new Set(singleCategoriesArray);
 const newCategoryArray = Array.from(_uniqueCategories);
 const sortedCategories = newCategoryArray.sort();
-console.log(sortedCategories);
+*/
 
 /* const uniqueCategories = (...booksData.map(book => book.categories.split("|"))) */
 
@@ -48,7 +51,11 @@ export const header = () => {
     userData.picture || '../../public/images/user.png'
   } alt="user page link" class="social_icon"></a></li>
       <li class="liked-books-container"><img src="../../public/images/heart.png" alt="like this book" class="social_icon liked-books-icon">
-      ${likedBooks.length >= 1 ? `<p class="liked-books-number">${likedBooks.length}</p>` : ''}
+      ${
+        likedBooks.length >= 1
+          ? `<p class="liked-books-number">${likedBooks.length}</p>`
+          : ''
+      }
       </li>
       <li><a href=${`${url}checkout`}><img src="../../public/images/shopping-cart.png" alt="shopping cart link" class="social_icon"></a></li>
       <li><a href=${`${url}contact`}><img src="../../public/images/mail.png" alt="mail link" class="social_icon"></a></li>
