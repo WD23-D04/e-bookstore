@@ -1,5 +1,10 @@
 import booksData from '../data/books-data.json';
 
+import {
+  capitalizeFirst,
+  capitalizeFirstLetterEveryWord,
+} from '../utilities/tools';
+
 const categoryUrl = window.location.pathname.split('/').at(-1);
 
 const filteredBooks = booksData.filter((book) => {
@@ -27,13 +32,15 @@ export const categoryPage = () => {
             <div class="book-card--vertical">
                 <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
                     alt="book cover" class="book-card__img">
-                <h3 class="book-card__title">${book.title}</h3>
-                <p class="book-card__author">${book.author}</p>
+                <h3 class="book-card__title">${capitalizeFirst(book.title)}</h3>
+                <p class="book-card__author">${capitalizeFirstLetterEveryWord(
+                  book.author
+                )}</p>
                 <p class="book-card__price">${book.price}</p>
             </div>
         </li>`
       )
-      .join("")}
+      .join('')}
         </ul>
 </main>
   </div>
