@@ -9,6 +9,11 @@ export const contact_page = () => {
     ) {
       const error = 'There are empty fields';
       console.error(error);
+      alert(error);
+      const errorElement = document.createElement('p');
+      errorElement.innerText = error;
+      const body = document.querySelector("body")
+      body?.appendChild(errorElement)  
       return error;
     } else if (
       formData.firstName.length > 50 ||
@@ -19,12 +24,11 @@ export const contact_page = () => {
       const error = 'Your fields are too long';
       console.error(error);
       return error;
-    }else if(formData.email.includes("@") || formData.email.includes(".")) {
-        const error = 'Your email should contain an @ and a .';
+    } else if (formData.email.includes('@') || formData.email.includes('.')) {
+      const error = 'Your email should contain an @ and a .';
       console.error(error);
       return error;
-    }
-    else {
+    } else {
       console.log(formData);
     }
   };
