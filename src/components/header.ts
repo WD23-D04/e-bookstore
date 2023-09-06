@@ -47,7 +47,6 @@ export const header = () => {
     <nav>
       <select>
         <!-- <li><a href=${`${url}single-book`}>Single</a></li> -->
-        
       </select>
     </nav>
   </header>`;

@@ -6,8 +6,13 @@ const filteredBooks = booksData.filter((book) => {
   const categories = book.categories
     .split('|')
     .map((category) => category.toLowerCase());
-  return categories.includes(categoryUrl);
+  const categoryFilter = categoryUrl || '';
+  const matchesCategory = categories.includes(categoryFilter);
+  return matchesCategory;
 });
+console.log(filteredBooks);
+
+
 
 export const categoryPage = () => {
   return /*html*/ `
