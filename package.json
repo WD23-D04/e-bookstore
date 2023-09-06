@@ -9,7 +9,9 @@
     "preview": "vite preview",
     "sass": "sass --watch ./src/styles/main.scss:./src/styles/main.css",
     "test": "vitest --ui",
-    "testcov": "vitest --coverage"
+    "testcov": "vitest --coverage",
+    "sc": "clear && git log --pretty=format:\"%h - %ad - %s (%an)\" -10 --date=format:\"%Y-%m-%d %H:%M:%S\"",
+    "sca": "clear && git log --pretty=format:\"%h - %ad - %s (%an)\" --date=format:\"%Y-%m-%d %H:%M:%S\""
   },
   "devDependencies": {
     "@types/jest": "^29.5.3",

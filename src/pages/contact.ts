@@ -3,7 +3,7 @@ export const contact_page = () => {
 
   const { firstName, lastName, email, message } = formData;
 
-  const handleError = (error) => {
+  const handleError = (error:string) => {
     console.error(error);
     return error;
   };
