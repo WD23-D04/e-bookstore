@@ -1,4 +1,4 @@
-import booksData from '../../books-data.json';
+import booksData from "../data/books-data.json";
 
 export const homePage = () => {
   return /*html*/ `

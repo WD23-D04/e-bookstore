@@ -1,5 +1,4 @@
-import { IUser } from '../interfaces';
-import userData from '../../user-data.json';
+import userData from '../data/user-data.json';
 const { fullName, userName, phone, email, address, website, picture } =
   userData;
 export const userPage = () => {

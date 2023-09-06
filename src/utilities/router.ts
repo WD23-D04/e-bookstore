@@ -11,6 +11,9 @@ import { _404 } from '../pages/_404';
 
 const getPageIdCode = () => window.location.pathname.slice(1);
 
+const categoryUrl = window.location.pathname.split('/').at(-1);
+
+
 const pageIdCode = getPageIdCode();
 
 export const getCurrentPage = () => {
@@ -19,7 +22,7 @@ export const getCurrentPage = () => {
       return homePage();
     case 'single-book':
       return singleBook();
-    case 'category-page/:id':
+    case `category-page/${categoryUrl}`:
       return categoryPage();
     case 'signup':
       return signupPage();

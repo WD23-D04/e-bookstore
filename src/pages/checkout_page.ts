@@ -1,5 +1,5 @@
-import userData from '../../user-data.json';
-import cartData from '../../cart-data.json';
+import userData from '../data/user-data.json';
+import cartData from '../data/cart-data.json';
 
 const { fullName, email, address, phone } = userData;
 

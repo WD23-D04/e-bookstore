@@ -1,4 +1,4 @@
-import booksData from '../../books-data.json';
+import booksData from '../data/books-data.json';
 const singleBookData = booksData[100];
 
 const formatPrice = (_price: string) => {

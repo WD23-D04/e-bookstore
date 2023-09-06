@@ -1,5 +1,5 @@
-import booksData from '../../books-data.json';
-import userData from '../../user-data.json';
+import booksData from '../data/books-data.json';
+import userData from '../data/user-data.json';
 const url = 'http://localhost:5173/';
 
 const likedBooks = booksData.slice(3, 10);
@@ -9,6 +9,15 @@ const uniqueCategories = [
     [].concat(...booksData.map((book) => book.categories.split('|'))).sort()
   ),
 ];
+
+const categories = booksData.map((book) => book.categories.split('|'));
+const singleCategoriesArray = categories.flat(Infinity);
+const _uniqueCategories = new Set(singleCategoriesArray);
+const newCategoryArray = Array.from(_uniqueCategories);
+const sortedCategories = newCategoryArray.sort();
+console.log(sortedCategories);
+
+/* const uniqueCategories = (...booksData.map(book => book.categories.split("|"))) */
 
 window.addEventListener('load', () => {
   uniqueCategories.forEach((category) => {
@@ -21,8 +30,6 @@ window.addEventListener('load', () => {
     });
     select?.appendChild(option);
   });
-
-  /* <a href="/category-page/${category.toLowerCase()}" >${category.toLowerCase()}</a> */
 });
 
 export const header = () => {
@@ -46,7 +53,6 @@ export const header = () => {
     </ul>
     <nav>
       <select>
-        <!-- <li><a href=${`${url}single-book`}>Single</a></li> -->
       </select>
     </nav>
   </header>`;

@@ -1,4 +1,4 @@
-import booksData from '../../books-data.json';
+import booksData from '../data/books-data.json';
 
 const categoryUrl = window.location.pathname.split('/').at(-1);
 
@@ -10,9 +10,6 @@ const filteredBooks = booksData.filter((book) => {
   const matchesCategory = categories.includes(categoryFilter);
   return matchesCategory;
 });
-console.log(filteredBooks);
-
-
 
 export const categoryPage = () => {
   return /*html*/ `
@@ -24,8 +21,9 @@ export const categoryPage = () => {
       <h1 class="category-page__title">Category Tag</h1>
   </div>
   <ul class="book-card-container">
-    ${filteredBooks.map(
-      (book) => /*html*/ `<li>
+    ${filteredBooks
+      .map(
+        (book) => /*html*/ `<li>
             <div class="book-card--vertical">
                 <img src="https://images.unsplash.com/photo-1641154748135-8032a61a3f80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Ym9vayUyMGNvdmVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
                     alt="book cover" class="book-card__img">
@@ -34,8 +32,8 @@ export const categoryPage = () => {
                 <p class="book-card__price">${book.price}</p>
             </div>
         </li>`
-    )}
-     
+      )
+      .join("")}
         </ul>
 </main>
   </div>
