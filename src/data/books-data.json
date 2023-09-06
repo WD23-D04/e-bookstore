@@ -1,4 +1,5 @@
-[{"id":1,"title":"Zen","author":"Lucy Broschek","price":5,"categories":"Drama","image":"http://dummyimage.com/244x100.png/dddddd/000000"},
+[
+    {"id":1,"title":"Zen","author":"Lucy Broschek","price":5,"categories":"Drama","image":"http://dummyimage.com/244x100.png/dddddd/000000"},
 {"id":2,"title":"Darby's Rangers","author":"Vickie Iskowicz","price":83,"categories":"Action|Drama|War","image":"http://dummyimage.com/185x100.png/cc0000/ffffff"},
 {"id":3,"title":"Street People","author":"Clemmy Valenta","price":98,"categories":"Action|Thriller","image":"http://dummyimage.com/119x100.png/cc0000/ffffff"},
 {"id":4,"title":"Miami Blues","author":"Dermot Poker","price":94,"categories":"Comedy|Crime|Drama","image":"http://dummyimage.com/122x100.png/dddddd/000000"},

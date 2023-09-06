@@ -1,6 +1,17 @@
 import userData from '../data/user-data.json';
-const { fullName, userName, phone, email, address, website, picture } =
-  userData;
+import booksData from '../data/books-data.json';
+
+const {
+  fullName,
+  userName,
+  phone,
+  email,
+  address,
+  website,
+  picture,
+  likedBooks,
+} = userData;
+
 export const userPage = () => {
   return /*html*/ `
     <div>
@@ -11,5 +22,18 @@ export const userPage = () => {
       <p>${phone}</p>
       <p>${website}</p>
       <img src=${picture}></img>
+      <section>
+        <h2>Liked Books</h2>
+      ${likedBooks.map((bookId) => {
+        const book = booksData.find((book) => book.id === bookId);
+        return /*html*/ `
+        <div>
+          <h3>${book?.title}</h3>
+          <p>${book?.author}</p>
+          <p>${book?.price}</p>
+      </div>
+        `;
+      }).join("")}
+      </section>
     </div>`;
 };

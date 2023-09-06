@@ -10,13 +10,16 @@ export const checkoutPage = () => {
 
     <main>
         <ul class="ordered-products-list">
-           ${cartData.map(
-             (book) => /*html*/ `<li>
+           ${cartData
+             .map(
+               (book) => /*html*/ `<li>
                 <h3>${book.title}</h3>
+                <p>${book.author}</p>
                 <p>${book.price}</p>
                 <a href="">see the product</a>
         </li>`
-           )}
+             )
+             .join("")}
         </ul>
         <div class="checkout-page__buttons-container">
             <a href="">See more books!</a>

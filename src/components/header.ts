@@ -2,7 +2,7 @@ import booksData from '../data/books-data.json';
 import userData from '../data/user-data.json';
 const url = 'http://localhost:5173/';
 
-const likedBooks = booksData.slice(3, 10);
+const likedBooks = userData.likedBooks;
 
 const uniqueCategories = [
   ...new Set(

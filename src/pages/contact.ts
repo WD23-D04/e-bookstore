@@ -1,29 +1,29 @@
 export const contact_page = () => {
   let formData = { firstName: '', lastName: '', email: '', message: '' };
 
+  const { firstName, lastName, email, message } = formData;
+
+  const handleError = (error) => {
+    console.error(error);
+    return error;
+  };
   const handleFormData = () => {
-    if (
-      formData.firstName.length < 2 ||
-      formData.lastName.length < 1 ||
-      formData.email.length < 1
-    ) {
+    if (firstName.length < 2 || lastName.length < 1 || email.length < 1) {
       const error = 'There are empty fields';
       console.error(error);
       alert(error);
       const errorElement = document.createElement('p');
       errorElement.innerText = error;
-      const body = document.querySelector("body")
-      body?.appendChild(errorElement)  
+      const body = document.querySelector('body');
+      body?.appendChild(errorElement);
       return error;
     } else if (
-      formData.firstName.length > 50 ||
-      formData.lastName.length > 50 ||
-      formData.email.length > 50 ||
-      formData.message.length > 1000
+      firstName.length > 50 ||
+      lastName.length > 50 ||
+      email.length > 50 ||
+      message.length > 1000
     ) {
-      const error = 'Your fields are too long';
-      console.error(error);
-      return error;
+      handleError('Your fields are too long');
     } else if (formData.email.includes('@') || formData.email.includes('.')) {
       const error = 'Your email should contain an @ and a .';
       console.error(error);
@@ -76,19 +76,6 @@ export const contact_page = () => {
     });
     submitButton.addEventListener('click', () => handleFormData());
   });
-
-  /* const checkInput = () => {
-        const inputValue = input.value
-        if(inputValue !== "") {
-            return 
-        }
-    } */
-
-  // const formData = {firstName : "", lastName : "", email : ""}
-
-  // const handleFormData = () => {}
-
-  // const sendFormData = () => {}
 
   return /*html*/ `
         <form>

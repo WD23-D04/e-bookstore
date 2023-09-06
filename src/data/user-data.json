@@ -16,5 +16,6 @@
     "name": "Robel-Corkery",
     "catchPhrase": "Multi-tiered zero tolerance productivity"
   },
+  "likedBooks": [8, 9, 10],
   "picture": "https://plus.unsplash.com/premium_photo-1666264200737-acad542a92ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
 }
