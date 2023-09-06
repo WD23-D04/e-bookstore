@@ -1,5 +1,9 @@
 import userData from '../data/user-data.json';
 import cartData from '../data/cart-data.json';
+import {
+  capitalizeFirst,
+  capitalizeFirstLetterEveryWord,
+} from '../utilities/tools';
 
 const { fullName, email, address, phone } = userData;
 
@@ -13,8 +17,8 @@ export const checkoutPage = () => {
            ${cartData
              .map(
                (book) => /*html*/ `<li>
-                <h3>${book.title}</h3>
-                <p>${book.author}</p>
+                <h3>${capitalizeFirst(book.title)}</h3>
+                <p>${capitalizeFirstLetterEveryWord(book.author)}</p>
                 <p>${book.price}</p>
                 <a href="">see the product</a>
         </li>`

@@ -1,4 +1,8 @@
-import booksData from "../data/books-data.json";
+/* import booksData from '../data/books-data.json';
+import {
+  capitalizeFirst,
+  capitalizeFirstLetterEveryWord,
+} from '../utilities/tools'; */
 
 export const homePage = () => {
   return /*html*/ `
