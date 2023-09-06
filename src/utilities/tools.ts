@@ -6,6 +6,7 @@ export const sanitizeBook = (book: IBook) => {
 };
 
 export const capitalizeFirst = (text: string) => {
+  text = text.trim();
   return `${text.slice(0, 1).toUpperCase()}${text.slice(1).toLowerCase()}`;
 };
 
