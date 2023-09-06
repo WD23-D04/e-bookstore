@@ -21,7 +21,7 @@ export const userPage = () => {
       <p>${address}</p>
       <p>${phone}</p>
       <p>${website}</p>
-      <img src=${picture}></img>
+      <img src=${picture}/>
       <section>
         <h2>Liked Books</h2>
       ${likedBooks.map((bookId) => {
