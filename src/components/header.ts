@@ -6,7 +6,9 @@ const likedBooks = userData.likedBooks;
 
 const uniqueCategories = [
   ...new Set(
-    [].concat(...booksData.map((book) => book.categories.split('|'))).sort()
+    ([] as string[])
+      .concat(...booksData.map((book) => book.categories.split('|')))
+      .sort()
   ),
 ];
 
