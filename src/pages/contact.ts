@@ -3,11 +3,20 @@ export const contact_page = () => {
 
   const handleFormData = () => {
     if (
-      formData.firstName.length < 1 ||
+      formData.firstName.length < 2 ||
       formData.lastName.length < 1 ||
       formData.email.length < 1
     ) {
       const error = 'There are empty fields';
+      console.error(error);
+      return error;
+    } else if (
+      formData.firstName.length > 50 ||
+      formData.lastName.length > 50 ||
+      formData.email.length > 50 ||
+      formData.message.length > 1000
+    ) {
+      const error = 'Your fields are too long';
       console.error(error);
       return error;
     } else {
