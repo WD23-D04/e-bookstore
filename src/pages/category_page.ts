@@ -1,20 +1,14 @@
 import booksData from '../data/books-data.json';
-
 import {
   capitalizeFirst,
   capitalizeFirstLetterEveryWord,
+  getFilteredBooks,
 } from '../utilities/tools';
 
 const categoryUrl = window.location.pathname.split('/').at(-1);
 
-const filteredBooks = booksData.filter((book) => {
-  const categories = book.categories
-    .split('|')
-    .map((category) => category.toLowerCase());
-  const categoryFilter = categoryUrl || '';
-  const matchesCategory = categories.includes(categoryFilter);
-  return matchesCategory;
-});
+/* const filteredBooks = booksData.filter(book => book.author === "" ) */
+const filteredBooks = getFilteredBooks(booksData, categoryUrl);
 
 export const categoryPage = () => {
   return /*html*/ `
@@ -22,8 +16,11 @@ export const categoryPage = () => {
   
 <main class="category-page">
   <div class="page-main-navigation">
-      <a href=""><img src="../../public/images/arrow.png" alt="go back icon" class="arrow-icon"></a>
-      <h1 class="category-page__title">Category Tag</h1>
+    <a href=""><img src="../../public/images/arrow.png" alt="go back icon" class="arrow-icon"></a>
+    <h1 class="category-page__title">Category Tag</h1>
+    <form action="">
+    <input type="text" placeholder="Search" id="inputField" >;
+  </form>
   </div>
   <ul class="book-card-container">
     ${filteredBooks
