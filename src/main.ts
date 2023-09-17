@@ -9,3 +9,11 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = /* html */ `
    ${header()}
     ${getCurrentPage()}
 `;
+
+let filteredValue = '';
+
+const searchInputElem = document.querySelector('#inputField');
+searchInputElem?.addEventListener('keyup', (e) => {
+  filteredValue = e.target.value.toLowerCase();
+});
+
