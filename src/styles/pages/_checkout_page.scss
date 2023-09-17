@@ -1,10 +1,7 @@
+@use '../utiles/_typography.scss' as *;
+
 .checkout-page {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
-  grid-template-areas:
-    'header header'
-    'main aside';
+  padding: 0 5vw;
 
   header {
     grid-area: header;
@@ -22,5 +19,10 @@
     margin-top: 10vh;
     display: flex;
     flex-direction: column;
+  }
+  &__total {
+    @include text-m;
+    font-weight: 900;
+    text-align: center;
   }
 }
