@@ -7,12 +7,11 @@ import { checkoutPage } from '../pages/checkout_page';
 import { contact_page } from '../pages/contact';
 import { userPage } from '../pages/userPage';
 import { _404 } from '../pages/_404';
-
+import { likedBooks } from '../pages/likedBooks_page';
 
 const getPageIdCode = () => window.location.pathname.slice(1);
 
 const categoryUrl = window.location.pathname.split('/').at(-1);
-
 
 const pageIdCode = getPageIdCode();
 
@@ -34,6 +33,8 @@ export const getCurrentPage = () => {
       return contact_page();
     case 'user':
       return userPage();
+    case 'liked-books':
+      return likedBooks();
     default:
       return _404();
   }

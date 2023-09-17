@@ -1,5 +1,8 @@
 @use '../utiles/_utiles' as *;
 
-.category-page__title {
-  @include text-m($black);
+.category-page {
+  padding: 0 5vw;
+  &__title {
+    @include text-m($black);
+  }
 }

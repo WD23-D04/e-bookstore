@@ -1,4 +1,5 @@
 import booksData from '../data/books-data.json';
+import { bookCardContainer } from '../components/bookCardContainer';
 import {
   capitalizeFirst,
   capitalizeFirstLetterEveryWord,
@@ -16,10 +17,10 @@ export const categoryPage = () => {
   
 <main class="category-page">
   <div class="page-main-navigation">
-    <a href=""><img src="../../public/images/arrow.png" alt="go back icon" class="arrow-icon"></a>
-    <h1 class="category-page__title">Category Tag</h1>
+    <a href="" class="page-main-navigation__icon"><img src="../../public/images/arrow.png" alt="go back icon" class="arrow-icon"></a>
+    <h1 class="page-main-navigation__title">${capitalizeFirst(categoryUrl)}</h1>
     <form action="">
-    <input type="text" placeholder="Search" id="inputField" >;
+    <input type="text" placeholder="Search" id="inputField" class="page-main-navigation__input">;
   </form>
   </div>
   <ul class="book-card-container">

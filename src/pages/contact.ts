@@ -3,7 +3,7 @@ export const contact_page = () => {
 
   const { firstName, lastName, email, message } = formData;
 
-  const handleError = (error:string) => {
+  const handleError = (error: string) => {
     console.error(error);
     return error;
   };
@@ -46,7 +46,8 @@ export const contact_page = () => {
     const submitButton = document.createElement('button');
     firstNameLabel.innerText = 'First Name';
     lastNameLabel.innerText = 'Last Name';
-    emailLabel.innerText = 'email';
+    emailLabel.innerText = 'Email';
+    messageLabel.innerText = "Message"
     submitButton.innerText = 'Send';
     submitButton.type = 'button';
     firstNameLabel.appendChild(firstNameInput);
@@ -58,6 +59,7 @@ export const contact_page = () => {
     form?.appendChild(emailLabel);
     form?.appendChild(messageLabel);
     form?.appendChild(submitButton);
+    submitButton.classList.add('button-cta');
     firstNameInput.addEventListener('change', (e: Event) => {
       const target = e.target as HTMLInputElement;
       formData.firstName = target.value;
@@ -78,7 +80,7 @@ export const contact_page = () => {
   });
 
   return /*html*/ `
-        <form>
+        <form class = "contact-page">
         </form>
     `;
 };

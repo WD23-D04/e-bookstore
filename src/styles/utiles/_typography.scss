@@ -1,64 +1,124 @@
 @use './colors' as *;
 @use './_font-sizes' as *;
 
-$font-family: 'Manrope', sans-serif;
+$manrope: 'Manrope', sans-serif;
 
 /* 16 */
-@mixin text-xs($color : $grey) {
+@mixin text-xs($color: $grey) {
+  font-family: $manrope;
   font-size: $font-xs;
   color: $color;
 }
 
 /* 20 */
 /* this can be black, grey or accent */
-@mixin text-s($color : $grey) {
+@mixin text-s($color: $grey) {
+  font-family: $manrope;
+
   font-size: $font-s;
   color: $color;
 }
 
 /* 24 */
 /* this can be black or grey */
-@mixin text-m($color : $grey) {
+@mixin text-m($color: $grey) {
+  font-family: $manrope;
   font-size: $font-m;
   color: $color;
 }
 
 /* 32 */
-@mixin text-l($color : $grey) {
+@mixin text-l($color: $grey) {
+  font-family: $manrope;
+
   font-size: $font-l;
   color: $color;
 }
 
 /* 40 */
 @mixin text-xl {
+  font-family: $manrope;
   font-size: $font-xl;
   color: $black;
 }
 
 /* 56 */
 @mixin text-xxl {
+  font-family: $manrope;
   font-size: $font-xxl;
   color: $black;
 }
 
+h1 {
+  @include text-xl;
+  text-align: center;
+}
+h3 {
+  @include text-m;
+}
+
+.not-found__title {
+  @include text-xl;
+  margin: 5vh auto;
+}
+
+label {
+  @include text-m;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 3vh 0;
+}
+
 input {
+  margin-top: 1.5vh;
   border: none;
   padding: 0.5em;
   height: fit-content;
   background-color: $main-color--light;
 }
 
-ul {
-  list-style-type: none;
+textarea {
+  margin-top: 1.5vh;
+  border: none;
+  padding: 0.5em;
+  height: fit-content;
+  background-color: $main-color--light;
+  display: inline;
+  height: 40vw;
 }
 
 li {
+  list-style-type: none;
+  @include text-m;
+}
+
+p {
   @include text-m;
 }
 
 a {
+  @include text-m;
   text-decoration: none;
+  color: $accent-color;
 }
+
+select {
+  @include text-xs;
+  background-color: $accent-color;
+  border: none;
+  color: $main-color--light;
+}
+option {
+  @include text-xs;
+  color: $accent-color;
+  background-color: $main-color--light;
+}
+
+address {
+  @include text-s;
+}
+
 /* 
 16 xs
 20 s

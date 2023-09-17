@@ -1,7 +1,7 @@
 @use '../utiles/utiles' as *;
 
 @mixin button($justify-content) {
-  width: 400px;
+  width: 150px;
   height: 60px;
   border: none;
   border-radius: 4px;
@@ -22,7 +22,6 @@
 .button-cta--2text {
   @include button(space-between);
   background-color: $accent-color;
-  
   color: white;
 }
 
@@ -37,4 +36,5 @@
   @include button(space-between);
   color: white;
   background-color: $accent-color;
+  margin: 3vh auto;
 }
