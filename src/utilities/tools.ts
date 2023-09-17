@@ -15,7 +15,7 @@ export const capitalizeFirstLetterEveryWord = (text: string) => {
   return words.map((word) => tools.capitalizeFirst(word)).join(' ');
 };
 
-export const getFilteredBooks = (booksData, categoryUrl) => {
+export const getFilteredBooks = (booksData : IBook[], categoryUrl : string) => {
   return booksData.filter((book) => {
     const categories = book.categories
       .split('|')
@@ -24,4 +24,30 @@ export const getFilteredBooks = (booksData, categoryUrl) => {
     const matchesCategory = categories.includes(categoryFilter);
     return matchesCategory;
   });
+};
+
+export const searchFilterBooks = (booksData : IBook[], filter : string) => {
+  return booksData.filter((book) => {
+    const { title, author } = book;
+    return title === filter || author === filter;
+  });
+};
+
+export const filterBooksPerPrice = (booksData : IBook[], price : number) => {
+  return booksData.filter((book) => {
+    return book.price < price;
+  });
+};
+
+export const bookCardContainer = (books: IBook[]) => {
+  return books.map(
+    (book: IBook) =>
+      `
+        <li key=${book.bookId}>
+          <h3>${book.title}</h3>
+          <p>${book.author}</p>
+          <p>${book.price} E</p>
+        </li>
+    `
+  );
 };
