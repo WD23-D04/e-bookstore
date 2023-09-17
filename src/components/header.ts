@@ -12,17 +12,6 @@ const uniqueCategories = [
   ),
 ];
 
-//["Drama"]
-
-/*
-const categories = booksData.map((book) => book.categories.split('|'));
-const singleCategoriesArray = categories.flat(Infinity);
-const _uniqueCategories = new Set(singleCategoriesArray);
-const newCategoryArray = Array.from(_uniqueCategories);
-const sortedCategories = newCategoryArray.sort();
-*/
-
-/* const uniqueCategories = (...booksData.map(book => book.categories.split("|"))) */
 
 window.addEventListener('load', () => {
   uniqueCategories.forEach((category) => {
@@ -41,7 +30,7 @@ export const header = () => {
   return /*html*/ `
   <header>
   <a href=${`${url}`}><img src="../../public/images/company-logo.png" alt="company logo" class="company-logo--small"></a>
-    <input type="text" placeholder="Search" id="inputField" onchange="(console.log(typeof parseInt(this.value)))">
+    
     
     <ul class="icon-container">
       

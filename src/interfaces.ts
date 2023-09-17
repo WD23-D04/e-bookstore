@@ -1,4 +1,5 @@
 export interface IBook {
+  bookId : string;
   title: string;
   author: string;
   price: number;
