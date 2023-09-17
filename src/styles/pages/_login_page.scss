@@ -1,5 +1,6 @@
 @use '../utiles/utiles' as *;
 .login-page {
+  padding: 0 5vw;
   display: flex;
   &__img {
     width: 50%;

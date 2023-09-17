@@ -1,6 +1,22 @@
+@use '../utiles/_typography.scss' as *;
 .page-main-navigation {
-  display: flex;
-  align-items: center;
+  display: grid;
+  justify-content: center;
   gap: 10px;
   margin: 3vh 0;
+  grid-template-columns: 40px auto;
+  grid-template-areas:
+    'icon title'
+    'search search';
+  &__icon {
+    grid-area: icon;
+  }
+
+  &__title {
+    grid-area: title;
+    @include text-m;
+  }
+  &__input {
+    grid-area: search;
+  }
 }

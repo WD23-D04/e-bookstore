@@ -1,46 +1,65 @@
+@use '../utiles/_colors.scss' as *;
 header {
   display: grid;
   grid-template-columns: 20% auto 20%;
   gap: 10px;
   align-items: center;
-  grid-template-areas: 'logo input icons';
-  background-color: orange;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    'logo icons'
+    'input icons';
+  background-color: $accent-color;
   padding: 3vh 2vw;
-}
-
-header .company-logo--small {
-  grid-area: logo;
-}
-
-header input {
-  grid-area: input;
-  max-width: 800px;
-}
-
-header .icon-container {
-  grid-area: icons;
-  display: flex;
-  gap: .5rem;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  @media screen and (min-width: 592px) {
-    flex-direction: row;
-    gap: 1.5rem;
+  .company-logo--small {
+    grid-area: logo;
   }
-}
+  input {
+    grid-area: input;
+    max-width: 800px;
+  }
 
-header .liked-books-number {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -75%);
-}
+  .icon-container {
+    grid-area: icons;
+    display: flex;
+    width: fit-content;
+    justify-self: end;
+    /* flex-direction: column; */
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 592px) {
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+  }
 
-header .liked-books-container {
-  position: relative;
-  margin-top: 1.5rem;
-  @media screen and (min-width: 592px) {
-    margin-top: 0;
+  .liked-books-number {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+  }
+
+  .liked-books-container {
+    position: relative;
+    margin-top: 1.5rem;
+    @media screen and (min-width: 592px) {
+      margin-top: 0;
+    }
+    &::after {
+      content: attr(value);
+      font-size: 1.8rem;
+      position: absolute;
+      bottom: 15px;
+      left: 10px; 
+      background-color: $main-color--light;
+      padding: 2.5px 8.5px;
+      border-radius: 50%;
+    }
+  }
+
+  .social_icon {
+    object-fit: cover;
   }
 }
