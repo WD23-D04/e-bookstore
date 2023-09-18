@@ -39,15 +39,3 @@ export const filterBooksPerPrice = (booksData : IBook[], price : number) => {
   });
 };
 
-export const bookCardContainer = (books: IBook[]) => {
-  return books.map(
-    (book: IBook) =>
-      `
-        <li key=${book.bookId}>
-          <h3>${book.title}</h3>
-          <p>${book.author}</p>
-          <p>${book.price} E</p>
-        </li>
-    `
-  );
-};

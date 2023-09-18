@@ -1,21 +1,13 @@
 import booksData from '../data/books-data.json';
-
-import { singleBookCard } from '../components/singleBookCard';
+import { bookCardContainer } from '../components/bookCardContainer';
 
 const likedBooksData = booksData.slice(20, 24);
 
 export const likedBooks = () => {
   return /*html*/ `
-        <section>
+        <section class="liked-books">
         <h1>Liked Books</h1>
-      ${likedBooksData
-        .map((book) => {
-          booksData.find((_book) => _book.id === book.id);
-          return /*html*/ `
-        ${singleBookCard(book)}
-        `;
-        })
-        .join('')}
+        ${bookCardContainer(likedBooksData)}
       </section>
     
     `;

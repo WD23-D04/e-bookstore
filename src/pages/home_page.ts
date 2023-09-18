@@ -1,21 +1,7 @@
-import {
-  filterBooksPerPrice,
-  searchFilterBooks,
-  bookCardContainer,
-} from '../utilities/tools';
-
-import { IBook } from '../interfaces';
-
-import { singleBookCard } from '../components/singleBookCard';
+import { bookCardContainer } from '../components/bookCardContainer';
 import booksData from '../data/books-data.json';
-const singleBookData: IBook = booksData[0];
 
-/* const filteredBooks = searchFilterBooks(booksData, 'Vince Pankethman'); */
-/* ${bookCardContainer(filteredBooks)} */
-
-const filteredBooks = filterBooksPerPrice(booksData, 30);
-
-console.log({ singleBookData });
+const filteredBooks = booksData.slice(3, 10);
 
 export const homePage = () => {
   return /*html*/ `

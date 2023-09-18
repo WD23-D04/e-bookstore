@@ -1,10 +1,5 @@
 import userData from '../data/user-data.json';
 import cartData from '../data/cart-data.json';
-import {
-  capitalizeFirst,
-  capitalizeFirstLetterEveryWord,
-} from '../utilities/tools';
-
 import { bookCardContainer } from '../components/bookCardContainer';
 
 const { fullName, email, address, phone } = userData;
@@ -16,7 +11,7 @@ export const checkoutPage = () => {
 
     <main class="checkout-page">
         ${bookCardContainer(cartData)}
-        <p class="checkout-page__total">TOTAL ${totalPrice}</p>
+        <p class="checkout-page__total">TOTAL ${totalPrice} €</p>
         <button class="button-buy">Proceed To Pay</button>
         <address>
           <p>${fullName}</p>
