@@ -1,7 +1,13 @@
 import { bookCardContainer } from '../components/bookCardContainer';
+import { findLowestPrice, sortPerAscendingPrice } from '../utilities/tools';
 import booksData from '../data/books-data.json';
 
 const filteredBooks = booksData.slice(3, 10);
+
+let user1ShoppingCart = [...filteredBooks];
+
+/* const cheapestBook = findLowestPrice(booksData); */
+const sortedBooks = sortPerAscendingPrice(booksData);
 
 export const homePage = () => {
   return /*html*/ `
@@ -11,7 +17,7 @@ export const homePage = () => {
         <section class="hero">
         </section>
         <section class="home-page__book-list">
-        ${bookCardContainer(filteredBooks).slice(0, 10)}    
+        ${bookCardContainer(filteredBooks)}    
         </section>
     </main>
 `;

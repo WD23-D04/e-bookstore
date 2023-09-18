@@ -19,11 +19,12 @@
   aspect-ratio: 4/5;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   grid-template-areas:
     'image image'
     'title title'
-    'author price';
+    'author price'
+    'button button';
 
   &__img {
     grid-area: image;
@@ -54,5 +55,13 @@
     &::after {
       content: ' €';
     }
+  }
+  &__button {
+    border: none;
+    border-radius: 4px;
+    grid-area: button;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
   }
 }

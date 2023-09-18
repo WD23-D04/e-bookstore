@@ -6,5 +6,6 @@ export const singleBookCard = (book: IBook) => {
           <img src=${book.image} alt="" class="book-card__img">
           <p class="book-card__author">${book.author}</p>
           <p class="book-card__price">${book.price}</p>
+          <button class="book-card__button">Buy Now</button>
         </li>`;
 };
